@@ -7,6 +7,14 @@
 body{
   background-color: #333;
 }
+
+.not-found{
+  color: #fff;
+  margin-top: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 .heading{
   color: blueviolet;
   text-shadow: #ff3e6c;
