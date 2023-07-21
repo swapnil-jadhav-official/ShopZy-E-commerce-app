@@ -1,9 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,  } from "react-router-dom";
 import ProductListing from "./containers/ProductListing";
 import Header from "./containers/Header";
 import "./App.css";
 import ProductDetails from "./containers/ProductDetails";
+import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import PageNotFound from "./containers/PageNotFound";
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={ProductListing} />
           <Route path="/product/:productId" component={ProductDetails} />
-          <Route>404 Not Found!</Route>
+          <Route path="/404" component={PageNotFound} />
+          <Redirect to="/404" />
         </Switch>
       </Router>
     </div>
